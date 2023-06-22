@@ -1,0 +1,782 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ========== END OF RESET ============== */
+
+/* ========== General layout and styling ============== */
+
+body {
+    background: #E8E8E8;
+    background-image: url(./images/phone_img_home.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    font-family: 'lato', Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    color: #32241D;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.specific_page {
+    background-image: url(./images/totoro_bg_img.png);
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'Architects Daughter','Indie Flower',cursive;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    padding-bottom: 1em;
+
+}
+
+h3 {
+    font-weight: 800;
+}
+
+h4 {
+    font-weight: 600;
+}
+p {
+    padding: 1em 0;
+    font-weight: 500;
+}
+b {
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+    color: #32241D;
+}
+p, h3, figcaption {
+    font-size: 16px;
+    line-height: 19px;
+}
+a > h1 {
+    font-family: 'Architects Daughter','Indie Flower',cursive ;
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 55px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 10px #000000;
+}
+
+/* ========== Header ============== */
+
+.totoro {
+    width: 24px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+a:hover > .totoro {
+    opacity: 1;
+}
+
+header {
+    padding: 0 24px;
+}
+
+header > nav > ul {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+}
+
+nav {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header > nav > ul > li {
+    min-width: 5em;
+    min-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > nav > ul > li > a {
+    color: #FFFFFF;
+}
+
+/* ========== Main ============== */
+
+main {
+    padding: 100px 24px;
+}
+
+.specific_page > main {
+    margin: 30px 14px;
+    padding: 0px 10px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 0.5em;
+}
+
+li > p {
+    padding-top: 0;
+}
+li > h3, li > p {
+    text-align: center;
+}
+
+section > h4 +p {
+    padding: 2px 0;
+}
+
+p > a {
+    font-weight: 700;
+    color: #03659E;
+}
+
+/* ========== footer ============== */
+
+footer {
+    background: #FFFFFF;
+    padding: 24px 24px 0 24px;
+    display: flex;
+    gap: 2em;
+    color: #000000;
+}
+
+h4, .footer_nav > li > a {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.section1 > a > img {
+    width: 98px;
+}
+.section2 > a > img {
+    width: 100px;
+}
+.section2 > img {
+    width: 195px;
+}
+.section2 {
+    display: flex;
+    flex-direction: column;
+}
+.section1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.line {
+    width: 108px;
+    border: 0.5px solid #000000;
+}
+
+/* ========== Home page ============== */
+
+/* header for home page*/
+.top_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: calc(70vh - 40px - 243px);
+    align-items: center;
+}
+.top_section > a > img {
+    width: 228px;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    width: 284px;
+    height: 39.93px;
+    background: #B50204;
+    border-radius: 9px;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2em 0;
+}
+
+.top_section + div {
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* end of home page header*/
+
+.production {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.main_characters {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+    padding: 1em 0;
+}
+
+.video-container {
+    position: relative;
+    margin-top: 1.5em;
+    display: flex;
+    width: 340px;
+    height: 200px;
+}
+  
+.video-container > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 200px;
+    align-self: center;
+    border: 0;
+}
+
+.discription > img, .video-container > iframe, .video-container {
+    max-width: calc(100vw - 49px);
+}
+
+
+ /* ========== story page ============== */ 
+
+ .bg {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 40px;
+    padding: 20px;
+    margin-top: 1em;
+ }
+
+ .story, .story_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+ }
+
+ .img {
+    position: relative;
+    border-radius: 40px;
+ }
+ .img > figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    background: #102538;
+    width: 230px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 0px 0px 40px 40px;
+ }
+ .img > img {
+    border-radius: 40px;
+ }
+
+ .image_section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+ }
+
+ #characters {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5em;
+ }
+
+ /* ========== Tickets page ============== */ 
+
+#tickets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tickets > h2 {
+    padding-bottom: 0;
+}
+
+#mei {
+    width: 324px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+#details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1em;
+}
+
+#details > h3, #details > p {
+    padding: 0.5em 0;
+}
+
+#horizontal_line {
+    position: absolute;
+    width: 60%;
+    height: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.61);
+    margin-left: 80px;
+}
+
+#date {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.5em;
+}
+
+#date + div > figure > figcaption {
+    font-weight: 800;
+}
+
+#date + div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#time {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+#time > section > h4 {
+    font-size: 16px;
+}
+
+#cost {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#cost > * {
+    padding: 2px 0;
+}
+
+.map {
+    max-width:100%;
+    overflow:hidden;
+    width:300px;
+    height:230px;
+}
+
+#google-maps-canvas {
+    height:100%; 
+    width:100%;
+    max-width:100%;
+}
+
+#google-maps-canvas > iframe {
+    height:100%;
+    width:100%;
+    border:0;
+}
+
+#google-maps-canvas img {
+    max-height:none;
+    max-width:none!important;
+    background:none!important;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+.location > .map {
+    align-self: center;
+}
+
+/* ========== resposive styling ============== */
+
+/* break point 1 */
+@media (min-width: 700px) {
+
+    /*Home page*/
+    body {
+        background-image: url(./images/totoro_bg_img.png);
+        min-height: 70vh;
+    }
+
+    .totoro {
+        width: 28px;
+    }
+
+    .top_section {
+        padding-top: 0;
+        height: calc(70vh - 68px);
+        width: 60vw;
+        justify-content: center;
+        background: radial-gradient(57.03% 57.03% at 50% 50%, rgba(0, 0, 0, 0.7) 14.58%, rgba(0, 0, 0, 0) 84.9%);
+    }
+    .top_section > a > img {
+        width: 258px;
+    }
+
+    nav {
+        font-size: 24px;
+    }
+
+    header > nav > ul {
+        padding-top: 20px;
+    }
+
+    main {
+        padding: 50px 46px 60px 46px;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p, h3, figcaption {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .production {
+        flex-direction: row;
+        gap: 3em;
+        padding-bottom: 0;
+        justify-content: center;
+    }
+    .main_characters {
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .video-container {
+        height: 270px;
+        width: 500px;
+    }
+    .video-container > iframe {
+        width: 500px;
+        height: 270px;
+    }
+
+    .section2 {
+        flex-direction: row;
+        gap: calc(100vw - 50px - 2em - 135px - 422px);
+    }
+    .section1 > a > img {
+        width: 135px;
+    }
+    .section2 > a > img {
+        width: 137px;
+    }
+    .section2 > img {
+        width: 285px;
+    }
+
+    h4, .footer_nav > li > a {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .line {
+        width: 156px;
+        border: .8px solid #000000;
+    }
+
+    .footer_nav > li {
+        padding-bottom: 10px;
+    }
+
+    /*story page*/
+    a > h1 {
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 100px;
+    }
+
+    .bg {
+        padding: 40px;
+        width: calc(100% - 88px);
+    }
+
+    .image_section {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .specific_page > main {
+        gap: 0;
+    }
+
+    #characters {
+        gap: 3em;
+    }
+
+    /*ticket page*/
+    #tickets > .button {
+        margin: 0;
+    }
+
+    #mei {
+        width: 387px;
+    }
+
+    #details {
+        max-width: 550px;
+        padding-bottom: 2em;
+    }
+
+    #horizontal_line {
+        margin-left: 100px;
+        width: 70%;
+    }
+
+    #theater {
+        width: 308px;
+    }
+
+    #time > section > h4 {
+        font-size: 20px;
+    }
+
+    .map {
+        width: 600px;
+        height: 344px;
+    }
+    
+    #time + p {
+        padding-bottom: 2em;
+    }
+}
+
+/* break point 2 */
+@media (orientation: landscape) and (min-width: 1025px){
+
+    /*Home page*/
+
+    .top_section {
+        padding-top: 0;
+        height: calc(70vh - 68px + 145px);
+        width: 40vw;
+    }
+    .top_section > a > img {
+        width: 315px;
+    }
+
+    main {
+        padding: 60px;
+        gap: 5em;
+    }
+
+    .discription {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .main_characters {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .video-container, .video-container > iframe {
+        width: 800px;
+        height: 417px;
+    }
+
+    .section2 {
+        gap: calc(100vw - 50px - 13em - 135px - 466px - 37px);
+    }
+    .section1 > a > img {
+        width: 166px;
+        padding-bottom: 30px;
+    }
+    .section2 > a > img {
+        width: 168px;
+    }
+    .section2 > img {
+        width: 372px;
+    }
+
+    h4, .footer_nav > li > a {
+        font-size: 20px;
+    }
+
+    .line {
+        width: 200px;
+        border: 1px solid #000000;
+    }
+
+    footer {
+        padding: 24px 60px 0 60px;
+        gap: 3em;
+    }
+    .footer_nav > li {
+        padding-bottom: 10px;
+    }
+
+    /*story page*/
+    a > h1 {
+        font-size: 64px;
+    }
+
+    .specific_page > main {
+        padding: 0 46px 30px 46px;
+    }
+
+    .story {
+        flex-direction: row;
+        gap: 2em;
+    }
+    .story_2 {
+        flex-direction: row-reverse;
+        gap: 2em;
+    }
+
+    #characters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*ticket page*/
+
+    .details {
+        padding-bottom: 2em;
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    #horizontal_line {
+        margin-left: 100px;
+        width: 70%;
+    }
+
+    #date + div {
+        flex-direction: row;
+        gap: 3em;
+        justify-content: center;
+    }
+
+    #date + div + p {
+        text-align: center;
+    }
+
+    .location {
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    .map {
+        width: 700px;
+        height: 400px;
+    }
+}
